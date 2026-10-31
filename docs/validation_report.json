@@ -1,0 +1,113 @@
+{
+  "package": "inno_medical_telecare",
+  "trl_claim": 4,
+  "data": "synthetic only",
+  "all_pass": true,
+  "runs": [
+    {
+      "seed": 0,
+      "metrics": {
+        "critical_recall": 1.0,
+        "deterioration_recall": 1.0,
+        "trend_false_alerts_per_patient_month": 0.1698,
+        "n_deteriorations": 14
+      },
+      "criteria": [
+        {
+          "metric": "critical_recall",
+          "op": ">=",
+          "threshold": 1.0,
+          "value": 1.0,
+          "pass": true,
+          "description": "critical readings that raise an immediate physician alert"
+        },
+        {
+          "metric": "deterioration_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 1.0,
+          "pass": true,
+          "description": "deteriorations detected within 14 days of onset (ramp lasts 15 days)"
+        },
+        {
+          "metric": "trend_false_alerts_per_patient_month",
+          "op": "<=",
+          "threshold": 0.3,
+          "value": 0.1698,
+          "pass": true,
+          "description": "trend alerts outside deterioration, per patient-month"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "metrics": {
+        "critical_recall": 1.0,
+        "deterioration_recall": 1.0,
+        "trend_false_alerts_per_patient_month": 0.2547,
+        "n_deteriorations": 17
+      },
+      "criteria": [
+        {
+          "metric": "critical_recall",
+          "op": ">=",
+          "threshold": 1.0,
+          "value": 1.0,
+          "pass": true,
+          "description": "critical readings that raise an immediate physician alert"
+        },
+        {
+          "metric": "deterioration_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 1.0,
+          "pass": true,
+          "description": "deteriorations detected within 14 days of onset (ramp lasts 15 days)"
+        },
+        {
+          "metric": "trend_false_alerts_per_patient_month",
+          "op": "<=",
+          "threshold": 0.3,
+          "value": 0.2547,
+          "pass": true,
+          "description": "trend alerts outside deterioration, per patient-month"
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "critical_recall": 1.0,
+        "deterioration_recall": 0.9643,
+        "trend_false_alerts_per_patient_month": 0.1415,
+        "n_deteriorations": 28
+      },
+      "criteria": [
+        {
+          "metric": "critical_recall",
+          "op": ">=",
+          "threshold": 1.0,
+          "value": 1.0,
+          "pass": true,
+          "description": "critical readings that raise an immediate physician alert"
+        },
+        {
+          "metric": "deterioration_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.9643,
+          "pass": true,
+          "description": "deteriorations detected within 14 days of onset (ramp lasts 15 days)"
+        },
+        {
+          "metric": "trend_false_alerts_per_patient_month",
+          "op": "<=",
+          "threshold": 0.3,
+          "value": 0.1415,
+          "pass": true,
+          "description": "trend alerts outside deterioration, per patient-month"
+        }
+      ]
+    }
+  ]
+}
